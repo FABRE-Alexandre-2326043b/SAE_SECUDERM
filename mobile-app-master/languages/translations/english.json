@@ -1,0 +1,371 @@
+{
+  "barItem": {
+    "bandageList": "Bandage List",
+    "scan": "Qr scanner",
+    "profile": "Profile"
+  },
+
+  "login": {
+    "welcome": "Welcome Back",
+    "logAccount": "Login to your account",
+    "emailPlaceholder": "Email",
+    "pwdPlaceholder": "Password",
+    "forgotPwd": "Forgot Password",
+    "registerLink": "Don’t have an account? Register here",
+    "loginBtn": "Login"
+  },
+
+  "register": {
+    "title": "Register",
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "email" : "Email",
+    "pwd" : "Password",
+    "loginLink": "Login",
+    "registerBtn": "Register"
+  },
+
+  "common": {
+    "close": "Close"
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "accept": "I accept the Terms and Conditions",
+    "content": "ARTICLE 1: Purpose\n\nThese Terms and Conditions (T&Cs) legally govern the use of the Secuderm mobile application, a medical monitoring application using photographs. Any access to and use of this application implies acceptance of and compliance with all the terms of these conditions.\n\nARTICLE 2: Legal notice\n\nThe Secuderm application is developed by Secuderm company, whose complete details appear in the legal notices of the application. The application is available on iOS and Android platforms.\n\nARTICLE 3: Access to services\n\nThe application provides the user with access to the following services:\n- Medical monitoring of wounds or dressings through photographs\n- QR code scanning for dressing identification\n- Adding comments to different photographs\n- Management of medical data related to care monitoring\n\nAccess to the application requires an internet connection and a user account. The costs incurred by the user to access it (internet connection, equipment) are not the responsibility of Secuderm.\n\nARTICLE 4: Medical data and confidentiality\n\nThe data collected via the Secuderm application is considered personal health data and is therefore protected by medical confidentiality and processed in accordance with the General Data Protection Regulation (GDPR) and applicable national laws on personal data protection.\n\nThe user expressly consents to the collection, processing, and storage of medical data concerning them or concerning patients whose monitoring they ensure. This data includes in particular:\n- Photographs of wounds and dressings\n- Comments associated with photographs\n- Dressing identifiers via QR code\n- Dates and times of photographs\n\nThis data is kept for a limited period defined in our privacy policy, accessible from the application.\n\nARTICLE 5: User rights\n\nIn accordance with applicable regulations, the user has the right to access, rectify, delete, limit processing, portability, and object to data concerning them.\n\nTo exercise these rights, the user can contact Secuderm at the email address indicated in the legal notices of the application.\n\nARTICLE 6: Responsibilities\n\nThe Secuderm application is a tool to aid medical monitoring and does not in any way substitute for a medical consultation or professional health advice.\n\nSecuderm company cannot be held responsible for:\n- The consequences of inappropriate use of the application\n- Medical decisions made based on information present in the application\n- Technical malfunctions beyond its control (connection problems, compatibility with certain devices)\n- The quality of photographs taken by the user\n\nThe user is solely responsible for the relevance and accuracy of the information they enter into the application.\n\nARTICLE 7: Intellectual property\n\nAll elements constituting the Secuderm application (texts, graphics, software, photographs, images, videos, sounds, logos, etc.) as well as the application itself are the exclusive property of Secuderm or are subject to authorization for use. Any reproduction, representation, modification, publication, total or partial adaptation of these elements, regardless of the means or process used, is prohibited without the prior written authorization of Secuderm.\n\nARTICLE 8: Security\n\nThe user agrees not to compromise the security of the application. In particular, they must not:\n- Access data that is not intended for them\n- Decompile, disassemble, or attempt to access the application's source code\n- Test the vulnerability of the application's systems\n- Attempt to disrupt or hinder the functioning of the application's servers\n\nIn the event of violation of these commitments, access to the application may be immediately suspended.\n\nARTICLE 9: Modifications to the T&Cs\n\nSecuderm company reserves the right to modify these T&Cs at any time. The user will be informed of the modifications by any appropriate means. Continued use of the application after notification of modifications constitutes acceptance of these modifications.\n\nARTICLE 10: Applicable law and jurisdiction\n\nThese T&Cs are governed by French legislation. In the event of a dispute, the parties undertake to seek an amicable solution. Failing agreement, French courts will have sole jurisdiction to settle the dispute.\n"
+  },
+  "error": {
+    "acceptTerms": "Please accept the Terms and Conditions to continue"
+  },
+
+  "fgtPwd":{
+    "title": "Forgot your password",
+    "subtitle": "Enter your e-mail address to receive a verification code",
+    "email": "email address",
+    "sendBtn": "Send",
+    "toast" : {
+      "mailError": "Please enter an e-mail address",
+      "failedStatus": "An unknown error has occurred"
+    }
+  },
+
+  "resetPwd": {
+    "title": "Reset password",
+    "subtitle": "Enter your verification code",
+    "codeInput": "Verification code",
+    "newPwd": "New Password",
+    "confirmPwd": "Confirm password",
+    "resetBtn": "Reset",
+    "toast": {
+      "fieldsError": "Please fill in all fields",
+      "pwdStatus" : {
+        "success": "Password successfully reset",
+        "error": "An unknown error has occurred"
+      }
+    }
+  },
+
+  "verifyEmail": {
+    "title": "Your email is",
+    "subtitle": "Enter your verification code",
+    "verifCode": "Verification code",
+    "sendBtn": "Confirm",
+    "toast": {
+      "fieldsError": "Please fill in all fields",
+      "emailStatus" : {
+        "success": "Success",
+        "error": "No success"
+      }
+    }
+  },
+
+  "homeScreen": {
+    "cameraPermission": {
+      "requesting": "Requesting for camera permission",
+      "noAccess": "No access to camera"
+    },
+    "loading": "Loading...",
+    "buttons": {
+      "activateScanner": "Activate Scanner",
+      "deactivateScanner": "Deactivate Scanner",
+      "scanAgain": "Tap to Scan Again",
+      "submit": "Submit",
+      "cancel": "Cancel"
+    },
+    "modals": {
+      "bandage": {
+        "title": "Enter the name for bandage",
+        "refProduct": "Ref Product",
+        "dimension": "Dimension",
+        "lotNumber": "Lot Number",
+        "expirationDate": "Expiration Date",
+        "numberInLot": "Number in lot",
+        "error": {
+          "nameMissing": "Please enter the name for bandage",
+          "scanAgain": "Please scan the QR code again"
+        },
+        "success": "QR code created successfully",
+        "errorGeneric": "Unknown error occurred"
+      },
+      "doctor": {
+        "title": "Enter the generated code",
+        "success": "Doctor linked to QR code successfully",
+        "error": {
+          "missingCode": "Please enter the generated code",
+          "linkFailed": "Failed to link doctor to QR code"
+        }
+      }
+    },
+    "toastMessages": {
+      "error": {
+        "title": "Error",
+        "qrCodeReadFailed": "Failed to read QR code data",
+        "bandageReplaceFailed": "Failed to replace bandage"
+      },
+      "success": {
+        "title": "Success",
+        "bandageReplaced": "Bandage replaced successfully"
+      }
+    }
+  },
+
+  "returnBtn": "Back",
+
+  "profilPage": {
+    "editInfoBtn": "Edit my informations",
+    "settingBtn": "Settings",
+    "storeBtn": "Visit our store"
+  },
+
+  "noteItem": {
+    "date": "Done on",
+    "by": "By",
+    "editModal" :{
+      "title": "Edit a note",
+      "contentInput": "Note content",
+      "contentPlaceholder": "Content",
+      "dateInput": "Date",
+      "editBtn": "Edit",
+      "cancelBtn": "Cancel",
+      "deleteBtn": "Delete"
+    }
+  },
+
+  "setting": {
+    "title": "Settings",
+    "languages": "Languages",
+    "logoutBtn": "Logout",
+    "deleteAccount": "Delete my account"
+  },
+
+  "logout": {
+    "title": "Are you sure you want to log out ?",
+    "cancelBtn": "Cancel",
+    "logoutBtn": "Disconnect"
+  },
+
+  "editInfos": {
+    "title": "Edit my informations",
+    "label": {
+      "lastName": "Last name",
+      "firstName": "First name",
+      "gender": "Gender",
+      "dateBirth": "Date of birth",
+      "email": "Email adress"
+    },
+    "saveBtn": "Save Changes",
+    "changePwdBtn": "Change password",
+    "modal" : {
+      "title" : "Change password ?",
+      "closeBtn": "Cancel",
+      "continueBtn": "Continue"
+    }
+  },
+
+  "changePwd": {
+    "title": "Change password",
+    "input": {
+      "verificationCode": "Verification code",
+      "currentPwd": "Current password",
+      "newPwd": "New password",
+      "confirmNewPwd": "Confirm new password"
+    },
+    "updateBtn": "Update password",
+    "verifCodeTxt": {
+      "sent": "A verification code has been sent to you by email",
+      "didntReceive": "Didn't receive the code?",
+      "returnLink": "Return verification code"
+    },
+    "modal": {
+      "title": "Resend the code ?",
+      "resendBtn": "Resend the code",
+      "cancelBtn": "Cancel"
+    },
+    "toast": {
+      "codeSent": "A verification code has been sent to your email address",
+      "AuthError": "Please log in to receive a verification code",
+      "doNotMatch": "New password and confirmation do not match",
+      "fieldsError": "Please fill in all fields",
+      "changeSuccess": "Password has been updated successfully"
+    }
+  },
+
+  "indexBandages": {
+    "noBandages": "No Bandages",
+    "refreshBtn": "Refresh"
+  },
+
+  "bandageDetails": {
+    "title" : "Bandage details :",
+    "btn": {
+      "doctor": "Access the doctor's file",
+      "personal": "Access the personal file",
+      "photo": "Add a photo",
+      "video": "Add a video",
+      "seeMedia": "See photos/videos",
+      "share": "Share my bandage",
+      "replace": "Replace the bandage",
+      "shared": "Shared bandages",
+      "delete": "Delete"
+    },
+    "alert": {
+      "title": "Delete this bandage ?",
+      "content": "This action is irreversible",
+      "cancelBtn": "Cancel",
+      "deleteBtn": "Delete"
+    }
+  },
+
+  "sharedTreatmentPlaces": {
+    "emptyList": "No shared treatment places",
+    "toast": {
+      "removeFailed": "Failed to remove the shared treatment place",
+      "removeSuccess": "Shared treatment place removed"
+    },
+    "btn": {
+      "remove": "Remove"
+    }
+  },
+
+  "medicalFollow":{
+    "addBtn" : "Add a prescription",
+    "title" : "Doctor follow-up sheet :",
+    "noNotes": "No prescription"
+  },
+
+  "addPrescription": {
+    "title": "Add a Prescription",
+    "ContentLabel": "Content of the Prescription",
+    "contentPlaceholder": "Content",
+    "dateLabel": "Date",
+    "btn": {
+      "cancel": "Cancel",
+      "add": "Add"
+    },
+    "toast": {
+      "success" :"Prescription added"
+    }
+  },
+
+  "personalFollow": {
+    "addBtn": "Add a note",
+    "title" : "Personal tracking sheet",
+    "noNotes": "No notes",
+    "exportPdfBtn": "Export to PDF"
+  },
+
+  "addNote": {
+    "title": "Add a Note",
+    "ContentLabel": "Content of the Note",
+    "contentPlaceholder": "Content",
+    "dateLabel": "Date",
+    "btn": {
+      "cancel": "Cancel",
+      "add": "Add"
+    },
+    "toast": {
+      "success" :"Note added"
+    }
+  },
+
+  "shareBandage": {
+    "title": "Share this bandage with doctor?",
+    "btn": "Share",
+    "modalTxt": "Share this code with your doctor to link your bandage to their account",
+    "toast": {
+      "generateError": "Failed to generate code"
+    }
+  },
+
+  "toastStatus" : {
+    "success": "Success",
+    "error": "Error",
+    "info": "Information"
+  },
+
+  "ChangeLanguage" : {
+    "title": "Change language ?",
+    "saveBtn": "Save"
+  },
+
+  "seeMedia" : {
+    "title": "Media list",
+    "noMedia" : "No media found"
+  },
+
+  "addImg" : {
+    "title": "Add an image",
+    "nameInput": "Image name",
+    "chooseBtn": "Choose an image",
+    "addBtn" : "Save the image",
+    "toast": {
+      "success" :"Image added",
+      "error": "Impossible to add the image"
+    },
+    "error": {
+      "nameMissing": "Please enter the image name",
+      "imgMissing": "Please insert an image"
+    }
+  },
+
+  "addVideo": {
+    "title": "Add a video",
+    "nameInput": "Video name",
+    "chooseBtn": "Choose a video",
+    "addBtn" : "Save the video",
+    "toast": {
+      "success" :"Video added",
+      "error": "Impossible to add the video"
+    },
+    "error": {
+      "nameMissing": "Please enter the video name",
+      "videoMissing": "Please insert a video"
+    }
+  },
+
+  "mediaItem": {
+    "videotype": "Video",
+    "imgtype": "Image",
+    "modal" : {
+      "title": "Are you sure you want to delete this file ?",
+      "confirmBtn": "Confirm",
+      "cancelBtn": "Cancel"
+    },
+    "toast": {
+      "success": "File deleted",
+      "error": "Impossible to delete the file"
+    }
+  },
+
+  "account": {
+    "deleteAccount": "Delete Account",
+    "deleteTitle": "Delete Your Account",
+    "deleteMessage": "You are about to permanently delete your account. This action will remove all your personal data from our system.",
+    "deleteWarning": "This action is irreversible and your data cannot be recovered.",
+    "deleteConfirm": "Delete My Account",
+    "confirmDeleteTitle": "Confirmation",
+    "confirmDeleteMessage": "Are you really sure you want to delete your account? This action is final.",
+    "confirmDelete": "Yes, delete",
+    "deleteError": "An error occurred while deleting your account. Please try again later."
+  }
+
+}

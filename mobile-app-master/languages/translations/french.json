@@ -1,0 +1,371 @@
+{
+  "barItem": {
+    "bandageList": "Liste pansements",
+    "scan": "Scanner Qr",
+    "profile": "Profil"
+  },
+
+  "login": {
+    "welcome": "Bon retour",
+    "logAccount": "Connectez-vous à votre compte",
+    "emailPlaceholder": "Email",
+    "pwdPlaceholder": "Mot de passe",
+    "forgotPwd": "Mot de passe oublié",
+    "registerLink": "Vous n'avez pas de compte ? Inscrivez-vous ici",
+    "loginBtn": "Se connecter"
+  },
+
+  "register": {
+    "title": "Inscription",
+    "firstName" : "Prénom",
+    "lastName" : "Nom de famille",
+    "email" : "Email",
+    "pwd" : "Mot de passe",
+    "loginLink": "Connexion",
+    "registerBtn": "S'incrire"
+  },
+
+  "common": {
+    "close": "Fermer"
+  },
+  "terms": {
+    "title": "Conditions Générales d'Utilisation",
+    "accept": "J'accepte les Conditions Générales d'Utilisation",
+    "content": "ARTICLE 1 : Objet\n\nLes présentes Conditions Générales d'Utilisation (CGU) encadrent juridiquement l'utilisation de l'application mobile Secuderm, application de suivi médical par photographie. Tout accès et utilisation de cette application suppose l'acceptation et le respect de l'ensemble des termes des présentes conditions.\n\nARTICLE 2 : Mentions légales\n\nL'application Secuderm est développée par la société Secuderm, dont les coordonnées complètes figurent dans les mentions légales de l'application. L'application est disponible sur les plateformes iOS et Android.\n\nARTICLE 3 : Accès aux services\n\nL'application permet à l'utilisateur un accès aux services suivants :\n- Suivi médical de plaies ou pansements par photographie\n- Scanner de QR code pour identification des pansements\n- Ajout de commentaires sur les différentes photographies\n- Gestion des données médicales relatives au suivi des soins\n\nL'accès à l'application nécessite une connexion internet ainsi qu'un compte utilisateur. Les frais supportés par l'utilisateur pour y accéder (connexion internet, équipement) ne sont pas à la charge de Secuderm.\n\nARTICLE 4 : Données médicales et confidentialité\n\nLes données recueillies via l'application Secuderm sont considérées comme des données de santé à caractère personnel et sont à ce titre protégées par le secret médical et traitées conformément au Règlement Général sur la Protection des Données (RGPD) et aux lois nationales applicables en matière de protection des données personnelles.\n\nL'utilisateur consent expressément à la collecte, au traitement et au stockage des données médicales le concernant ou concernant les patients dont il assure le suivi. Ces données comprennent notamment :\n- Les photographies des plaies et pansements\n- Les commentaires associés aux photographies\n- Les identifiants des pansements via QR code\n- Les dates et heures des prises de vue\n\nCes données sont conservées pendant une durée limitée définie dans notre politique de confidentialité, accessible depuis l'application.\n\nARTICLE 5 : Droits des utilisateurs\n\nConformément à la réglementation applicable, l'utilisateur dispose d'un droit d'accès, de rectification, d'effacement, de limitation du traitement, de portabilité et d'opposition aux données le concernant.\n\nPour exercer ces droits, l'utilisateur peut contacter Secuderm à l'adresse email indiquée dans les mentions légales de l'application.\n\nARTICLE 6 : Responsabilités\n\nL'application Secuderm est un outil d'aide au suivi médical et ne se substitue en aucun cas à une consultation médicale ou à un avis professionnel de santé.\n\nLa société Secuderm ne peut être tenue responsable :\n- Des conséquences d'une utilisation inappropriée de l'application\n- Des décisions médicales prises sur la base des informations présentes dans l'application\n- Des dysfonctionnements techniques indépendants de sa volonté (problèmes de connexion, compatibilité avec certains appareils)\n- De la qualité des photographies prises par l'utilisateur\n\nL'utilisateur est seul responsable de la pertinence et de l'exactitude des informations qu'il saisit dans l'application.\n\nARTICLE 7 : Propriété intellectuelle\n\nL'ensemble des éléments constituant l'application Secuderm (textes, graphismes, logiciels, photographies, images, vidéos, sons, logos, etc.) ainsi que l'application elle-même sont la propriété exclusive de Secuderm ou font l'objet d'une autorisation d'utilisation. Toute reproduction, représentation, modification, publication, adaptation totale ou partielle de ces éléments, quel que soit le moyen ou le procédé utilisé, est interdite sans l'autorisation écrite préalable de Secuderm.\n\nARTICLE 8 : Sécurité\n\nL'utilisateur s'engage à ne pas porter atteinte à la sécurité de l'application. Il s'interdit notamment :\n- D'accéder à des données qui ne lui sont pas destinées\n- De décompiler, désassembler ou tenter d'accéder au code source de l'application\n- De tester la vulnérabilité des systèmes de l'application\n- De tenter de perturber ou d'entraver le fonctionnement des serveurs de l'application\n\nEn cas de violation de ces engagements, l'accès à l'application pourra être immédiatement suspendu.\n\nARTICLE 9 : Modifications des CGU\n\nLa société Secuderm se réserve le droit de modifier les présentes CGU à tout moment. L'utilisateur sera informé des modifications par tout moyen approprié. L'utilisation continue de l'application après notification des modifications constitue une acceptation de ces modifications.\n\nARTICLE 10 : Droit applicable et juridiction compétente\n\nLes présentes CGU sont régies par la législation française. En cas de différend, les parties s'engagent à rechercher une solution amiable. À défaut d'accord, les tribunaux français seront seuls compétents pour régler le litige.\n"
+  },
+  "error": {
+    "acceptTerms": "Veuillez accepter les Conditions Générales d'Utilisation pour continuer"
+  },
+
+  "fgtPwd":{
+    "title": "Mot de passe oublié",
+    "subtitle": "Entrez votre email pour recevoir un code de vérification",
+    "email": "Adresse mail",
+    "sendBtn": "Envoyer le code",
+    "toast" : {
+      "mailError": "Veuillez entrer une adresse mail",
+      "failedStatus": "Une erreur inconnue est survenue"
+    }
+  },
+
+  "resetPwd": {
+    "title": "Réinitialer le mot de passe",
+    "subtitle": "Entrez le code de vérification",
+    "codeInput": "Code de vérification",
+    "newPwd": "Nouveau mot de passe",
+    "confirmPwd": "Confirmer le mot de passe",
+    "resetBtn": "Réinitialer",
+    "toast": {
+      "fieldsError": "Veuillez remplir tous les champs",
+      "emailStatus" : {
+        "success": "Le mot de passe a été réinitialisé",
+        "error": "Une erreur inconnue est survenue"
+      }
+    }
+  },
+
+  "verifyEmail": {
+    "title": "Votre email est",
+    "subtitle": "Entrez votre code de vérification",
+    "verifCode": "Code de vérification",
+    "sendBtn": "Confirmer",
+    "toast": {
+      "fieldsError": "Veuillez remplir tous les champs",
+      "emailStatus" : {
+        "success": "Succès",
+        "error": "Pas de succès"
+      }
+    }
+  },
+
+  "homeScreen": {
+    "cameraPermission": {
+      "requesting": "Demande d'autorisation pour la caméra",
+      "noAccess": "Pas d'accès à la caméra"
+    },
+    "loading": "Chargement...",
+    "buttons": {
+      "activateScanner": "Activer le scanner",
+      "deactivateScanner": "Désactiver le scanner",
+      "scanAgain": "Appuyez pour scanner à nouveau",
+      "submit": "Soumettre",
+      "cancel": "Annuler"
+    },
+    "modals": {
+      "bandage": {
+        "title": "Entrez le nom du bandage",
+        "refProduct": "Produit Référence",
+        "dimension": "Dimension",
+        "lotNumber": "Numéro de lot",
+        "expirationDate": "Date d'expiration",
+        "numberInLot": "Numéro dans le lot",
+        "error": {
+          "nameMissing": "Veuillez entrer le nom du bandage",
+          "scanAgain": "Veuillez scanner à nouveau le QR code"
+        },
+        "success": "QR code créé avec succès",
+        "errorGeneric": "Erreur inconnue"
+      },
+      "doctor": {
+        "title": "Entrez le code généré",
+        "success": "Médecin lié au QR code avec succès",
+        "error": {
+          "missingCode": "Veuillez entrer le code généré",
+          "linkFailed": "Échec de la liaison du médecin au QR code"
+        }
+      }
+    },
+    "toastMessages": {
+      "error": {
+        "title": "Erreur",
+        "qrCodeReadFailed": "Échec de la lecture des données du QR code",
+        "bandageReplaceFailed": "Échec du remplacement du pansement"
+      },
+      "success": {
+        "title": "Succès",
+        "bandageReplaced": "Pansement remplacé avec succès"
+      }
+    }
+  },
+
+  "returnBtn": "Retour",
+
+  "profilPage": {
+    "editInfoBtn": "Modifier mes informations",
+    "settingBtn": "Paramètres",
+    "storeBtn": "Visiter notre boutique"
+  },
+
+  "noteItem": {
+    "date": "Fait le",
+    "by": "Par",
+    "editModal" :{
+      "title": "Modifier la note",
+      "contentInput": "Contenue de la note",
+      "contentPlaceholder": "Contenue",
+      "dateInput": "Date",
+      "editBtn": "Modifier",
+      "cancelBtn": "Annuler",
+      "deleteBtn": "Supprimer"
+    }
+  },
+
+  "setting": {
+    "title": "Paramètres",
+    "languages": "Langues",
+    "logoutBtn": "Déconnecter",
+    "deleteAccount": "Supprimer mon compte"
+  },
+
+  "logout": {
+    "title": "Êtes-vous sûr de vouloir vous déconnecter ?",
+    "cancelBtn": "Annuler",
+    "logoutBtn": "Déconnexion"
+  },
+
+  "editInfos": {
+    "title": "Modifier mes informations",
+    "label": {
+      "lastName": "Nom de famille",
+      "firstName": "Prénom",
+      "gender": "Sexe",
+      "dateBirth": "Date de naissance",
+      "email": "Adresse mail"
+    },
+    "saveBtn": "Sauvegarder les changements",
+    "changePwdBtn": "Changer le mot de passe",
+    "modal" : {
+      "title" : "Changer le mot de passe ?",
+      "closeBtn": "Annuler",
+      "continueBtn": "Continuer"
+    }
+  },
+
+  "changePwd": {
+    "title": "Changer le mot de passe",
+    "input": {
+      "verificationCode": "Code de vérification",
+      "currentPwd": "Mot de passe actuel",
+      "newPwd": "Nouveau mot de passe",
+      "confirmNewPwd": "Confirmer nouveau mot de passe"
+    },
+    "updateBtn": "Changer le mot de passe",
+    "verifCodeTxt": {
+      "sent": "Un code de vérification vous a été envoyé par mail",
+      "didntReceive": "Vous n'avez rien reçu ?",
+      "returnLink": "Renvoyer un code"
+    },
+    "modal": {
+      "title": "Renvoyer un code ?",
+      "resendBtn" : "Renvoyer un code",
+      "cancelBtn": "Annuler"
+    },
+    "toast": {
+      "codeSent": "Un code de vérification vous a été envoyé.",
+      "AuthError": "Veuillez vous connecter pour recevoir le code de vérification.",
+      "doNotMatch": "Le nouveau mot de passe et la confirmation ne correspondent pas.",
+      "fieldsError": "Veuillez remplir tous les champs.",
+      "changeSuccess": "Le mot de passe a été mis à jour."
+    }
+  },
+
+  "indexBandages": {
+    "noBandages": "Aucun pansements",
+    "refreshBtn": "Rafraichir"
+  },
+
+  "bandageDetails": {
+    "title" : "Details du pansement :",
+    "btn": {
+      "doctor": "Accès au suivi médical",
+      "personal": "Accès au suivi personnel",
+      "photo": "Ajouter une photo",
+      "video": "Ajouter une vidéo",
+      "seeMedia": "Voir les photos/Vidéos",
+      "share": "Partager le pansement",
+      "replace": "Remplacer le pansement",
+      "shared": "Pansements partagés",
+      "delete": "Supprimer"
+    },
+    "alert": {
+      "title": "Supprimer ce pansement ?",
+      "content": "Êtes-vous sûr de vouloir supprimer ce pansement ?",
+      "cancelBtn": "Annuler",
+      "deleteBtn": "Supprimer"
+    }
+  },
+
+  "sharedTreatmentPlaces": {
+    "emptyList": "Aucun traitement partagé",
+    "toast": {
+      "removeFailed": "Echec de la suppression du traitement partagé",
+      "removeSuccess": "Traitement partagé supprimé"
+    },
+    "btn": {
+      "remove": "Supprimer"
+    }
+  },
+
+  "medicalFollow":{
+    "addBtn" : "Ajouter une prescription",
+    "title" : "Fiche de suivi médical :",
+    "noNotes": "Pas de prescriptions"
+  },
+
+  "addPrescription": {
+    "title": "Ajouter une prescription",
+    "ContentLabel": "Contenu de la prescription",
+    "contentPlaceholder": "Contenu",
+    "dateLabel": "Date",
+    "btn": {
+      "cancel": "Annuler",
+      "add": "Ajouter"
+    },
+    "toast": {
+      "success" :"Prescription ajoutée"
+    }
+  },
+
+  "personalFollow": {
+    "addBtn": "Ajouter une note",
+    "title" : "Fiche de suivi personnel",
+    "noNotes": "Pas de notes de suivi",
+    "exportPdfBtn": "Exporter en PDF"
+  },
+
+  "addNote": {
+    "title": "Ajouter une note",
+    "ContentLabel": "Contenu de la note",
+    "contentPlaceholder": "Contenu",
+    "dateLabel": "Date",
+    "btn": {
+      "cancel": "Annuler",
+      "add": "Ajouter"
+    },
+    "toast": {
+      "success" :"Note ajoutée"
+    }
+  },
+
+  "shareBandage": {
+    "title": "Partager le pansement avec un docteur ?",
+    "btn": "Partager",
+    "modalTxt": "Partager ce code avec votre docteur pour le lier à son compte",
+    "toast": {
+      "generateError": "Echec de la génération du code"
+    }
+  },
+
+  "toastStatus" : {
+    "success": "Succès",
+    "error": "Erreur",
+    "info": "Information"
+  },
+
+  "ChangeLanguage" : {
+    "title": "Changer de langue ?",
+    "saveBtn": "Sauvegarder"
+  },
+
+  "seeMedia" : {
+    "title": "Galerie de Médias",
+    "noMedia" : "Aucun média trouvé"
+  },
+
+  "addImg" : {
+    "title": "Ajouter une image",
+    "nameInput": "Nom de l'image",
+    "chooseBtn": "Choisir une image",
+    "addBtn" : "Sauvegarder l'image",
+    "toast": {
+      "success" :"Image ajoutée",
+      "error": "Impossible d'ajouter l'image"
+    },
+    "error": {
+        "nameMissing": "Veuillez entrer le nom de l'image",
+        "imgMissing": "Veuillez insérer une image"
+    }
+  },
+
+  "addVideo": {
+    "title": "Ajouter une vidéo",
+    "nameInput": "Nom de la vidéo",
+    "chooseBtn": "Choisir une vidéo",
+    "addBtn" : "Sauvegarder la vidéo",
+    "toast": {
+      "success" :"Vidéo ajoutée",
+      "error": "Impossible d'ajouter la vidéo"
+    },
+    "error": {
+        "nameMissing": "Veuillez entrer le nom de la vidéo",
+        "videoMissing": "Veuillez insérer une vidéo"
+    }
+  },
+
+  "mediaItem": {
+    "videotype": "Vidéo",
+    "imgtype": "Image",
+    "modal" : {
+      "title": "Êtes-vous sûr de vouloir supprimer cet élément ?",
+      "confirmBtn": "Confirmer",
+      "cancelBtn": "Annuler"
+    },
+    "toast": {
+      "success": "Fichier supprimé avec succès",
+        "error": "Impossible de supprimer le fichier"
+    }
+  },
+
+  "account": {
+    "deleteAccount": "Supprimer le compte",
+    "deleteTitle": "Supprimer votre compte",
+    "deleteMessage": "Vous êtes sur le point de supprimer définitivement votre compte. Cette action supprimera toutes vos données personnelles de notre système.",
+    "deleteWarning": "Cette action est irréversible et vos données ne pourront pas être récupérées.",
+    "deleteConfirm": "Supprimer mon compte",
+    "confirmDeleteTitle": "Confirmation",
+    "confirmDeleteMessage": "Êtes-vous vraiment sûr de vouloir supprimer votre compte ? Cette action est définitive.",
+    "confirmDelete": "Oui, supprimer",
+    "deleteError": "Une erreur s'est produite lors de la suppression de votre compte. Veuillez réessayer plus tard."
+  }
+
+}

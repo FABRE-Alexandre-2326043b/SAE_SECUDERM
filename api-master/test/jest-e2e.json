@@ -1,0 +1,19 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testMatch": [
+    "**/01-auth.e2e-spec.ts",
+    "**/02-qrcode.e2e-spec.ts",
+    "**/03-client-notes.e2e-spec.ts",
+    "**/04-users.e2e-spec.ts",
+    "**/05-prescription.e2e-spec.ts"
+  ],
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "maxWorkers": 1,
+  "verbose": true,
+  "testSequencer": "../custom-sequencer.js",
+  "testTimeout": 30000
+}
