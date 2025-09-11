@@ -11,7 +11,7 @@ export class FileService {
 
   constructor(
     @InjectModel(File)
-    private readonly fileModel: typeof File, // Используем модель для работы с базой
+    private readonly fileModel: typeof File, // Nous utilisons le modèle pour travailler avec la base
   ) {
     this.s3 = new S3({
       region: process.env.AWS_REGION,
@@ -54,10 +54,10 @@ export class FileService {
       ContentType: file.mimetype,
     };
 
-    // Загружаем файл в S3
+    // Télécharger le fichier vers S3
     const result = await this.s3.upload(uploadParams).promise();
 
-    // Сохраняем метаданные в базе данных
+    // Enregistrer les métadonnées dans la base de données
     const newFile = await this.fileModel.create({
       original_name: sanitizedFilename,
       file_name: uploadParams.Key,
@@ -73,30 +73,30 @@ export class FileService {
     return newFile;
   }
 
-  // Получение файла по ID
+  // Obtenir le fichier par ID
   async getFileById(id: string): Promise<File> {
     return this.fileModel.findByPk(id);
   }
 
-  // Генерация временного URL для скачивания файла
+  // Générer une URL temporaire pour télécharger le fichier
   async getFileUrl(fileName: string): Promise<string> {
     const params = {
       Bucket: this.bucketName,
       Key: fileName,
-      Expires: 60 * 15, // Срок действия ссылки 15 минут
+      Expires: 60 * 15, // L'URL expire au bout de 15 minutes
     };
 
     return this.s3.getSignedUrlPromise('getObject', params);
   }
 
-  // Удаление файла
+  // Supprimer le fichier
   async deleteFile(id: string): Promise<void> {
     const file = await this.getFileById(id);
     if (!file) {
       throw new Error('File not found');
     }
 
-    // Удаляем файл из S3
+    // Supprimer le fichier de S3
     await this.s3
       .deleteObject({
         Bucket: this.bucketName,
@@ -104,7 +104,7 @@ export class FileService {
       })
       .promise();
 
-    // Удаляем запись из базы данных
+    // Supprimer l’entrée de la base de données
     await this.fileModel.destroy({ where: { id } });
   }
 

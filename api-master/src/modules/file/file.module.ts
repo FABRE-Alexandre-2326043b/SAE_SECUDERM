@@ -8,6 +8,6 @@ import { File } from './file.model';
   imports: [SequelizeModule.forFeature([File])],
   controllers: [FileController],
   providers: [FileService],
-  exports: [FileService], // Экспорт сервиса для использования в других модулях
+  exports: [FileService], // Service d’exportation pour une utilisation dans d’autres modules
 })
 export class FileModule {}
