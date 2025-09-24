@@ -6,20 +6,24 @@ import { User } from '../users/users.model';
 
 @Injectable()
 export class FileService {
-  private s3: S3;
+  private s3: S3 | null = null;
   private bucketName: string;
+  private useS3: boolean;
 
   constructor(
     @InjectModel(File)
     private readonly fileModel: typeof File, // Nous utilisons le modèle pour travailler avec la base
   ) {
-    this.s3 = new S3({
-      region: process.env.AWS_REGION,
-      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    });
-    this.bucketName = process.env.AWS_S3_BUCKET_NAME;
-    this.ensureBucketSecurity(); // Vérifier la sécurité du bucket au démarrage
+    this.useS3 = process.env.USE_S3 === 'true';
+    this.bucketName = process.env.AWS_S3_BUCKET_NAME || '';
+    if (this.useS3) {
+      this.s3 = new S3({
+        region: process.env.AWS_REGION,
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+      });
+      this.ensureBucketSecurity(); // Vérifier la sécurité du bucket au démarrage
+    }
   }
 
   async uploadFile(
@@ -47,21 +51,30 @@ export class FileService {
     if (!allowedMimeTypes.includes(file.mimetype)) {
       throw new Error('Type de fichier non autorisé');
     }
-    const uploadParams = {
-      Bucket: this.bucketName,
-      Key: `uploads/${Date.now()}-${sanitizedFilename}`,
-      Body: file.buffer,
-      ContentType: file.mimetype,
-    };
 
-    // Télécharger le fichier vers S3
-    const result = await this.s3.upload(uploadParams).promise();
+    let fileUrl = '';
+    let fileName = `uploads/${Date.now()}-${sanitizedFilename}`;
+
+    if (this.useS3 && this.s3) {
+      const uploadParams = {
+        Bucket: this.bucketName,
+        Key: fileName,
+        Body: file.buffer,
+        ContentType: file.mimetype,
+      };
+      const result = await this.s3.upload(uploadParams).promise();
+      fileUrl = result.Location;
+      fileName = uploadParams.Key;
+    } else {
+      // En dev, retourne une URL factice
+      fileUrl = `http://localhost/fake-file/${fileName}`;
+    }
 
     // Enregistrer les métadonnées dans la base de données
     const newFile = await this.fileModel.create({
       original_name: sanitizedFilename,
-      file_name: uploadParams.Key,
-      file_url: result.Location,
+      file_name: fileName,
+      file_url: fileUrl,
       mime_type: file.mimetype,
       size: file.size,
       uploaded_by: currentUser.id,
@@ -80,13 +93,17 @@ export class FileService {
 
   // Générer une URL temporaire pour télécharger le fichier
   async getFileUrl(fileName: string): Promise<string> {
-    const params = {
-      Bucket: this.bucketName,
-      Key: fileName,
-      Expires: 60 * 15, // L'URL expire au bout de 15 minutes
-    };
-
-    return this.s3.getSignedUrlPromise('getObject', params);
+    if (this.useS3 && this.s3) {
+      const params = {
+        Bucket: this.bucketName,
+        Key: fileName,
+        Expires: 60 * 15, // L'URL expire au bout de 15 minutes
+      };
+      return this.s3.getSignedUrlPromise('getObject', params);
+    } else {
+      // En dev, retourne une URL factice
+      return `http://localhost/fake-file/${fileName}`;
+    }
   }
 
   // Supprimer le fichier
@@ -95,16 +112,14 @@ export class FileService {
     if (!file) {
       throw new Error('File not found');
     }
-
-    // Supprimer le fichier de S3
-    await this.s3
-      .deleteObject({
-        Bucket: this.bucketName,
-        Key: file.file_name,
-      })
-      .promise();
-
-    // Supprimer l’entrée de la base de données
+    if (this.useS3 && this.s3) {
+      await this.s3
+        .deleteObject({
+          Bucket: this.bucketName,
+          Key: file.file_name,
+        })
+        .promise();
+    }
     await this.fileModel.destroy({ where: { id } });
   }
 
@@ -116,14 +131,15 @@ export class FileService {
 
     // Delete each file from S3 and the database
     for (const file of files) {
-      // Delete the file from S3
-      await this.s3
-        .deleteObject({
-          Bucket: this.bucketName,
-          Key: file.file_name,
-        })
-        .promise();
-
+      if (this.useS3 && this.s3) {
+        // Delete the file from S3
+        await this.s3
+          .deleteObject({
+            Bucket: this.bucketName,
+            Key: file.file_name,
+          })
+          .promise();
+      }
       // Delete the file record from the database
       await this.fileModel.destroy({ where: { id: file.id } });
     }
@@ -157,6 +173,7 @@ export class FileService {
   }
 
   async ensureBucketSecurity(): Promise<void> {
+    if (!this.useS3 || !this.s3) return;
     try {
       // Vérifier et appliquer le chiffrement par défaut
       await this.s3

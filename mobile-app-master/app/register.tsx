@@ -117,7 +117,11 @@ export default function RegisterScreen() {
           <ThemedText style={[styles.title]}>{i18n.t("register.title")}</ThemedText>
 
           {/* Error message if creation fails */}
-          {status === "failed" && <ThemedText style={[styles.errorText]}>{error || 'Unknown Error'}</ThemedText>}
+          {status === 'failed' && (
+            <ThemedText style={styles.errorText}>
+              {error || 'Une erreur inconnue est survenue'}
+            </ThemedText>
+          )}
 
           {/* Field for first name */}
           <View style={styles.inputContainer}>

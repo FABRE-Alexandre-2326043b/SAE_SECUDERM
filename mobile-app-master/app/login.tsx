@@ -50,7 +50,7 @@ export default function LoginScreen() {
     if (status === 'succeeded') {
       router.replace('/');
     }
-  }, [status]);
+  }, []);
 
   if (status === "loading") {
     // Display a loading spinner while the login process is ongoing

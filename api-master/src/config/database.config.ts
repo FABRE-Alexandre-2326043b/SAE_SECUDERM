@@ -13,11 +13,5 @@ export const databaseConfig = (): SequelizeModuleOptions => {
     database: config.database.database,
     autoLoadModels: true,
     synchronize: true,
-    dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false,
-      },
-    },
   };
 };

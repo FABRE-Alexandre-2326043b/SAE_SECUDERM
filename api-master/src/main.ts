@@ -21,6 +21,7 @@ async function bootstrap() {
   }
 
   app.useGlobalPipes(new ValidationPipe());
-  await app.listen(3000);
+  const server = await app.listen(3000, '0.0.0.0');
+  console.log(server.address());
 }
 bootstrap();

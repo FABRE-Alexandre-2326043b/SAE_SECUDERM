@@ -8,16 +8,18 @@ import { Colors } from "@/constants/Colors";
  */
 // This component defines the layout and navigation for the Bandage List screen.
 export default function BandageListLayout() {
+  const colorScheme = useColorScheme();
   return (
     <Stack
       screenOptions={{
         headerStyle: {
-          backgroundColor: useColorScheme() === 'light' ? Colors.light.background : Colors.dark.background,
+          backgroundColor: colorScheme === 'light' ? Colors.light.background : Colors.dark.background,
         },
         headerTitleAlign: "center",
         headerTitle: () => <LogoForHeader />,
         headerBackVisible: false,
-      }}>
+      }
+      }>
       <Stack.Screen name="index" />
       <Stack.Screen name="[uuid]/add-image"
                     options={{
