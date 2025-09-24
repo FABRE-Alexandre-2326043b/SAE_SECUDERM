@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "expo": "^54.0.9"
+  },
+  "scripts": {
+    "build": "nest build",
+    "start": "node dist/main.js",
+    "start:dev": "nest start --watch",
+    "start:prod": "node dist/main.js"
+  }
+}
