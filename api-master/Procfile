@@ -1,1 +1,1 @@
-web: node dist/main.js
+web: ls -la && node dist/main.js
