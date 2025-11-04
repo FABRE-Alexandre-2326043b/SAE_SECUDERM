@@ -14,7 +14,7 @@ export const databaseConfig = (): SequelizeModuleOptions => {
       password: dbUrl.password,
       database: dbUrl.pathname.slice(1), 
       autoLoadModels: true,
-      synchronize: true, 
+      synchronize: false, 
       dialectOptions: {
         ssl: {
           require: true,
@@ -33,6 +33,6 @@ export const databaseConfig = (): SequelizeModuleOptions => {
     password: config.database.password,
     database: config.database.database,
     autoLoadModels: true,
-    synchronize: true,
+    synchronize: false,
   };
 };
