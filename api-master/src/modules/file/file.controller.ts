@@ -25,6 +25,14 @@ import { JwtAuthGuard } from '../../guards/jwt-auth.guard';
 import { RolesGuard } from '../../guards/roles.guard';
 import { Roles } from '../../decorators/roles.decorator';
 import { UserRole } from '../users/enums/user.enums';
+import { extname } from 'path';
+
+export const imageFileFilter = (req, file, callback) => {
+  if (!file.originalname.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
+    return callback(new Error('Type de fichier non autorisé (extension)'), false);
+  }
+  callback(null, true);
+};
 
 @ApiTags('File')
 @ApiBearerAuth()
@@ -51,7 +59,9 @@ export class FileController {
     description: 'File successfully uploaded',
   })
   @Post('upload')
-  @UseInterceptors(FileInterceptor('file'))
+  @UseInterceptors(FileInterceptor('file', {
+    fileFilter: imageFileFilter,
+  }))
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles(UserRole.ADMIN, UserRole.USER)
   async uploadFile(

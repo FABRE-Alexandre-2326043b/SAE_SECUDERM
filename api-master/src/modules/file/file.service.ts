@@ -48,10 +48,10 @@ export class FileService {
       'application/msword',
       'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     ];
-    console.log('MIMETYPE REÇU :', file.mimetype);
-    if (!allowedMimeTypes.includes(file.mimetype)) {
-      throw new Error('Type de fichier non autorisé');
-    }
+    // console.log('MIMETYPE REÇU :', file.mimetype);
+    // if (!allowedMimeTypes.includes(file.mimetype)) {
+    //   throw new Error('Type de fichier non autorisé');
+    // }
 
     let fileUrl = '';
     let fileName = `uploads/${Date.now()}-${sanitizedFilename}`;
