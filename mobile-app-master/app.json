@@ -38,6 +38,12 @@
     "experiments": {
       "typedRoutes": true
     },
-    "newArchEnabled": true
+    "newArchEnabled": true,
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "6e9e20f9-4552-410e-b6ed-bad90e3133b8"
+      }
+    }
   }
 }
